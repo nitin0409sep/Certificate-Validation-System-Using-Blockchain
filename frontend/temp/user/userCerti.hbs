@@ -1,0 +1,41 @@
+{{!-- Header --}}
+{{>header}}
+
+{{!-- User Navbar --}}
+{{>userNav}}
+
+{{!-- Certificate Images --}}
+
+<section class="py-4">
+    <div class="container">
+        <h1 class="text-center text-secondary">Certificates</h1>
+        <div class="row mt-5">
+
+            {{#each data}} {{!-- hbs Iteration Method just like Foreach Loop --}}
+            <div class="col-md-4">
+                <div class="card m-2">
+                    <div class="card-body">
+
+                        {{!-- Icon --}}
+                        <div class="container text-center py-3">
+                            <img src="../../public/userCertificataes/{{this.img}}" style="width: 100%; height: 15vw;
+                                object-fit: cover;" alt=" Gallery Pic {{@index}}">
+                            <label for="text" style="padding-top: 10px;">{{this.name}}</label>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 p-2">
+                                    <a href="/editCerti"><button class="btn btn-success btn-sm">Edit Name</button></a>
+                                </div>
+                                <div class="col-md-6 col-sm-12 p-2">
+                                    <a href="/deleteCerti"><button class="btn btn-danger btn-sm">Delete
+                                        </button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{/each}}
+        </div>
+    </div>
+</section>

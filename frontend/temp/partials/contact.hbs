@@ -1,0 +1,51 @@
+<!-- Contact Form -->
+<div class="container pt-5 pb-5" id="contactId">
+    <div class="col-md-12 text-center p-3 ">
+        <h3> Contact Us</h3>
+        <p style="color:mediumpurple; text-align:justify">If you have any questions about the services we provide simply
+            use the contact
+            us form below. We try and
+            respond to all queries and comments within 24 hours.</p>
+    </div>
+    <div class="col-md-12">
+        <form class="row g-3" data-toggle="validator" role="form" action="/contact" method="post" id="form">
+            <div class="col-md-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" required placeholder="Your Name"
+                        name="name">
+                    <label for="floatingInput">Your Name</label>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@gmail.com"
+                        name="email" required>
+                    <label for="floatingInput">Email Address</label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Phone Number" name="phone"
+                        required>
+                    <label for="floatingInput" required>Phone Number</label>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="floatingInput" placeholder="Comment Box" name="comment"
+                        style="height:200px" required></textarea>
+                    <label for="floatingInput">Query Box</label>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <button class="btn btn-success" type="submit">Submit Query</button>
+            </div>
+
+        </form>
+    </div>
+</div>

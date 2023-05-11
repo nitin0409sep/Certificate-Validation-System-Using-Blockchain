@@ -1,0 +1,67 @@
+{{>header}}
+
+{{>userNav}}
+
+{{!-- Upload Pic Style --}}
+<style>
+    .highlight {
+        background: #dfedfb;
+        padding: 0;
+        text-align: left;
+        margin: 15px 0;
+    }
+
+    .highlight .heading {
+        border-bottom: solid 2px #0d6efd;
+        text-align: left;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 19px;
+        font-weight: 600;
+        padding: 15px 15px;
+    }
+
+    .highlight form {
+        padding: 15px 25px;
+    }
+</style>
+
+{{!-- Upload File --}}
+<div class="container w-50">
+    <!--  SINGLE FILE -->
+    <div class="highlight">
+        <div class="heading">Upload Detail's</div>
+
+
+        <form method="post" action="/postEditCerti" data-toggle="validator" role="form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="text">Certificate Name</label>
+                <input type="text" class="form-control" name="name" value="{{data.name}}" required>
+            </div>
+
+            <div class="mb-3 ">
+                <label for="text" class="text-left">Roll Number</label>
+                <input type="text" class="form-control" name="rollNumber" value="{{data.rollNumber}}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="text">Certificate ID Number</label>
+                <input type="text" class="form-control" name="certiId" value="{{data.certiId}}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="text">Upload Certificate</label>
+                <input type="file" class="form-control" name="single_input" value="{{data.img}}" required>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+
+</div>
